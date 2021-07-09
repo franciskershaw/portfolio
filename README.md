@@ -1,102 +1,104 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# FrancisK - Portfolio
 
-Welcome USER_NAME,
+(Hero image and brief intro)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. The last update to this file was: **July 2, 2021**
+## Table of Contents
 
-## Gitpod Reminders
+* [Notes pre development](#notes-pre-development)
+* [User Stories](#user-stories)
+* [Scope Plane](#scope-plane)
+* [Structure Plane](#structure-plane)
+* [Skeleton Plane](#skeleton-plane)
+* [Surface Plane](#surface-plane)
+    * [Keywords](#keywords)
+    * [Colour Scheme](#colour-scheme)
+    * [Typography](#typography)
+* [Data Model](#data-model)
+* [Features](#features)
+    * [Existing Features](#existing-features)
+    * [Defensive design features](#defensive-design-features)
+* [Languages and frameworks](#languages-and-frameworks)
+* [Testing](#testing)
+* [Deployment](#deployment)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+## Notes pre development
 
-A blue button should appear to click: _Make Public_,
+Key points to be aware of:
+* Going to use Flask so that there is some admin functionality, ability to add/edit/delete projects or edit the content on the site
+* Try to implement Python classes to get a better understanding of how that works.
+* Going to try to use SCSS so that I have an introduction to that.
+* Going to attempt to code the site without Bootstrap so that I can practice my CSS grid skills.
+* Need to do research on SEO to try and make the site climb the google rankings.
+* Need to work out how to register domain names and potentially deploy elsewhere other than Heroku.
 
-Another blue button should appear to click: _Open Browser_.
+## User stories
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### User stories (site owner)
+1. As the owner of the portfolio site, I want people to see my work presented in an aesthetically pleasing manner.
+2. As the owner of the site, I want people to see a summary of myself and my skill set
+3. As the owner of the site, I want people to be able to contact me if they want to get in touch.
+4. As the owner of the site, I want to be able to add, edit, or delete projects from the site with ease so that I can update the content when needed.
 
-A blue button should appear to click: _Make Public_,
+### User stories (visitors)
+1. As an employer, I want a convenient place to find this prospective employee’s previous or current work so that I can assess the quality of their coding skills.
+2. I want the projects to have navigation to the repository and the live site, as well as some descriptive information of what the project entailed.
+3. As an employer I want an easy means of contacting the site owner if I am suitably impressed so that we can talk about opportunities.
+4. As a visitor to the site, I want to know a bit more about the site owner’s personal history so that I can get a more well rounded view of the person outside of the work they have produced.
+5. As an employer, I want to be able to download their full CV so that I can see an official breakdown of their previous work history.
+6. As a visitor to the site, I would like navigate to the site owner’s social accounts (like LinkedIn or Github
 
-Another blue button should appear to click: _Open Browser_.
+## Scope plane
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Required functional specifications
+* A picture of me
+* A description of who I am and what I do
+* Summary of my skills
+* My projects past and present
+* A means of contacting me
+* Links to my GitHub and LinkedIn
 
-To log into the Heroku toolbelt CLI:
+### Content requirements
+* Need to present a ‘vibe’ that properly captures who I am and what I could bring in a work context.
+* Need the means to add, edit, or delete projects as and when I need to (I need a backend)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### Nice to have
+* Blog
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## Structure plane
 
-------
+* Most of the site is going to fit onto one page, with a fixed navigation bar that directs you to the correct part of the page.
+* Start with a picture of me and a short description of what I do, followed by a call to action to ‘get in touch’ or ‘view projects’ which are the two most important things I want to get out of this site.
+* Short description of my work history can come beneath this potentially?
+* Beneath the description section will be the meat of the website, my past projects - these are represented by relatively small cards containing the README hero image, the title of the project, and 2 buttons: more details, live site.
+* More details will load a template for that specific project containing essentially the introduction given on the GitHub repo. One button will direct people to the repository, one will link to the live site, one will redirect back to the main portfolio page. Should contain some screenshots of the picture
+* Beneath this work section can be a summary of my skills, represented by their logos
+* Beneath the projects will be the contact form, the fields are name, email address, and message field.
+* To add a new project, admin users can handle that side of things
+* The navigation bar will have my name on the top left, the main navigation elements in the middle, and social links + CV on the right
+* The footer will have the same content as the navigation bar
 
-## Release History
+### Templates
+* index.html
+* view_project.html
+* add_project.html
+* edit_project.html
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Skeleton plane
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## Surface plane
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### Keywords:
+* Professional
+* Playful
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+### Colour scheme:
+* #f3f6f7
+* #dbe9ee
+* #c0d6df
+* #567bb3
+* #405863
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+### Typography
+* Quicksand
+* Dosis
