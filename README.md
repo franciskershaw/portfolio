@@ -83,6 +83,7 @@ Key points to be aware of:
 * view_project.html
 * add_project.html
 * edit_project.html
+* login.html
 
 ## Skeleton plane
 
