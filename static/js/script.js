@@ -20,12 +20,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
             openMobileNavbar();
     }
     });
-    
+
     const navbarMenu = navbar.querySelector(".navbar-menu");
     const navbarLinksContainer = navbar.querySelector(".navbar-links");
 
     navbarLinksContainer.addEventListener("click", (clickEvent) => {
     clickEvent.stopPropagation();
-});
+    });
     navbarMenu.addEventListener("click", closeMobileNavbar);
 });
