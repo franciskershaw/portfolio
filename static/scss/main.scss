@@ -1,5 +1,11 @@
-$main-color: red;
+// This main SCSS file is the single file output, it is intended to ONLY @import other files.
 
-body {
-    background-color: $main-color;
-}
+// 1 - HELPERS
+@import '1-helpers/variables';
+
+// 2 - BASICS
+@import '2-basics/reset';
+@import '2-basics/base';
+
+// 3 - LAYOUT
+@import '3-layout/navbar';
